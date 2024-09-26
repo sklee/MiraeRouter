@@ -1,17 +1,16 @@
 import './App.css';
-import Layout from './Layout/Layout';
-import { Outlet, useLocation, useNavigate } from 'react-router-dom';
+import RootRoutes from './common/routes/index';
+import { BrowserRouter } from 'react-router-dom'
 
 function App() {
   // const location = useLocation()
   // const navigate = useNavigate()
 
   return (
-
-    <Layout>
-
-      <Outlet/>
-    </Layout>
+    // <BrowserRouter basename="nrv_svc/web/smn/nrv">
+    <BrowserRouter>
+    <RootRoutes />
+    </BrowserRouter>
   );
 }
 

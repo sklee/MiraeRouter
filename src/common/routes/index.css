@@ -1,0 +1,30 @@
+.page-transition {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  min-height: 100svh;
+}
+.page-transition--push-enter {
+  z-index: 1;
+  transform: translateX(100%);
+}
+.page-transition--push-enter-active {
+  transform: translateX(0);
+  transition: transform 400ms;
+}
+.page-transition--push-exit {
+  z-index: 0;
+  transform: translateX(0);
+}
+.page-transition--push-exit-active {
+  transform: translateX(-100%);
+  transition: transform 400ms;
+}
+.page-transition.exit-active {
+  z-index: -1;
+  display: none !important;
+}
